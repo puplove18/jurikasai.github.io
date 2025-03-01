@@ -1,9 +1,9 @@
 <h1 align="center">Hi 👋, I'm Juri</h1>
-<h3 align="center">An Undergraduate Computer Science student✨</h3>
+<h3 align="center">An Undergraduate Computer Science student</h3>
 
 - 🔭 I’m currently working on **Python, C, and Java**
 
-- 🌱 I’m currently learning **Computer Science**
+- 🌱 I’m currently studying **Computer Science**
 
 
 
