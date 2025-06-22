@@ -39,22 +39,22 @@
     nav a:hover {
       text-decoration: underline;
     }
-    .tabs {
-      text-align: center;
-      padding: 20px 0;
-      background-color: var(--cream);
+    .nav-tabs {
+      display: flex;
+      gap: 15px;
     }
+    
     .tablink {
-      background-color: var(--blue);
+      background: none;
       border: none;
-      padding: 10px 20px;
-      margin: 5px;
+      color: var(--cream);
+      font-size: 1rem;
       cursor: pointer;
-      color: var(--brown);
-      font-weight: bold;
+      padding: 8px;
     }
+    
     .tablink:hover {
-      background-color: #b2d9e6;
+      text-decoration: underline;
     }
     .section {
       display: none;
@@ -101,6 +101,13 @@
 <body>
   <header>
     <h1> Juri Kasai </h1>
+    <nav class="nav-tabs">
+      <button class="tablink" onclick="openTab('about')">About</button>
+      <button class="tablink" onclick="openTab('projects')">Projects</button>
+      <button class="tablink" onclick="openTab('skills')">Skills</button>
+      <button class="tablink" onclick="openTab('contact')">Contact</button>
+    </nav>
+    
     <nav> 
       <a href = "#about"> About </a>
       <a href="#projects">Projects</a>
@@ -114,13 +121,6 @@
     <p> Undergraduate Computer Science student exploring .</p>
     <a href="#contact" class="button">Contact Me</button></a>
   </section>
-
-  <div class="tabs">
-    <button class="tablink" onclick="openTab('about')">About</button>
-    <button class="tablink" onclick="openTab('projects')">Projects</button>
-    <button class="tablink" onclick="openTab('skills')">Skills</button>
-    <button class="tablink" onclick="openTab('contact')">Contact</button>
-  </div>
 
   <section class="section active" id="about">
     <h2>About Me</h2>
