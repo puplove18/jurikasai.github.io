@@ -39,6 +39,29 @@
     nav a:hover {
       text-decoration: underline;
     }
+    .tabs {
+      text-align: center;
+      padding: 20px 0;
+      background-color: var(--cream);
+    }
+    .tablink {
+      background-color: var(--blue);
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+      color: var(--brown);
+      font-weight: bold;
+    }
+    .tablink:hover {
+      background-color: #b2d9e6;
+    }
+    .section {
+      display: none;
+    }
+    .section.active {
+      display: block;
+    }
     .section {
       padding: 60px 20px;
       max-width: 800px;
@@ -53,16 +76,12 @@
       font-size: 2rem;
       margin-bottom: 10px;
     }
-    .button {
-      background-color: var(--brown);
-      color: var(--white);
-      border: none;
-      padding: 10px 20px;
-      margin-top: 20px;
-      cursor: pointer;
+    a.button {
+      color: white;
+      text-decoration: none;
     }
-    .button:hover {
-      background-color: #2c1f13;
+    a.button:hover {
+      text-decoration: underline;
     }
     .project {
       background-color: var(--white);
@@ -93,15 +112,22 @@
   <section class="hero">
     <h2> My name is Juri Kasai </h2>
     <p> Undergraduate Computer Science student exploring .</p>
-    <a href="#contact"><button class="button">Contact Me</button></a>
+    <a href="#contact" class="button">Contact Me</button></a>
   </section>
 
-  <section class="section" id="about">
+  <div class="tabs">
+    <button class="tablink" onclick="openTab('about')">About</button>
+    <button class="tablink" onclick="openTab('projects')">Projects</button>
+    <button class="tablink" onclick="openTab('skills')">Skills</button>
+    <button class="tablink" onclick="openTab('contact')">Contact</button>
+  </div>
+
+  <section class="section active" id="about">
     <h2>About Me</h2>
     <p>I’m currently in my final year of Computer Science. I enjoy building small projects that solve real problems, and I’m especially curious about cybersecurity, blockchain, and clean web design. I also love dogs — especially my brown and apricot toy poodles!</p>
   </section>
 
-  <section class="section" id="projects">
+  <section class="section active" id="projects">
     <h2>Projects</h2>
     <div class="project">
       <strong>Personal Portfolio Website</strong><br />
@@ -112,7 +138,7 @@
     <!-- Add more projects here -->
   </section>
 
-  <section class="section" id="skills">
+  <section class="section active" id="skills">
     <h2>Skills & Tools</h2>
     <ul>
       <li><strong>Comfortable with:</strong> Python, Java</li>
@@ -123,7 +149,7 @@
     </ul>
   </section>
 
-  <section class="section" id="contact">
+  <section class="section active" id="contact">
     <h2>Contact</h2>
     <p>Email: jurikasai18@gmail.com</p>
     <p>GitHub: <a href="https://github.com/puplove18" target="_blank">puplove18</a></p>
@@ -132,6 +158,16 @@
   <footer>
     &copy; 2025 Juri Kasai
   </footer>
+  <script>
+    function openTab(tabId) {
+      const tabs = document.querySelectorAll('.section');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+  
+    // Show 'about' tab by default on page load
+    window.onload = () => openTab('about');
+  </script>
 
 </body>
 </html>
