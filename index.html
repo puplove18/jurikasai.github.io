@@ -60,6 +60,11 @@
       max-width: 800px;
       margin: auto;
     }
+    .section img:hover {
+      opacity: 0.7;
+      transform: scale(1.1);
+      transition: 0.3s ease;
+    }
     .hero {
       background-color: var(--cream);
       padding: 100px 20px;
@@ -149,13 +154,24 @@
 
   <section class = "section active" id="contact">
     <h2>Contact</h2>
-    <p>Email: jurikasai18@gmail.com</p>
-    <p>GitHub: <a href="https://github.com/puplove18" target="_blank">puplove18</a></p>
+    <p>
+      <a href="https://github.com/puplove18" target="_blank" style="margin-right: 20px;">
+        <img src="assets/icons/github.png" alt="GitHub" width="28" height="28" style="vertical-align: middle;" />
+      </a>
+      <a href="https://www.linkedin.com/in/juri-kasai-2b69aa2a3" target="_blank">
+        <img src="assets/icons/linkedin.png" alt="LinkedIn" width="28" height="28" style="vertical-align: middle;" />
+      </a>
+    </p>
   </section>
 
   <footer>
-    &copy; 2025 Juri Kasai
+    &copy; 2025 Juri Kasai <br>
+    <small>
+      <a href="https://www.flaticon.com/free-icons/github" title="github icons">GitHub icons by riajulislam</a> | 
+      <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">LinkedIn icons by IconsBox</a> — Flaticon
+    </small>
   </footer>
+  
   <script>
     function openTab(tabId) {
       const tabs = document.querySelectorAll('.section');
