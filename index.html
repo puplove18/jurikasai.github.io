@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
-  <meta charset = "UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> Juri Kasai</title>
+  <title>Juri Kasai</title>
   <style>
     :root {
       --brown: #3E2C19;
@@ -11,7 +11,7 @@
       --blue: #CBEAF6;
       --white: #ffffff;
     }
-    body { 
+    body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: var(--cream);
@@ -42,7 +42,7 @@
       border: none;
       color: var(--cream);
       font-size: 1rem;
-      font-weight: bold
+      font-weight: bold;
       cursor: pointer;
       padding: 8px 12px;
     }
@@ -51,14 +51,12 @@
     }
     .section {
       display: none;
-    }
-    .section.active {
-      display: block;
-    }
-    .section {
       padding: 60px 20px;
       max-width: 800px;
       margin: auto;
+    }
+    .section.active {
+      display: block;
     }
     .section img:hover {
       opacity: 0.7;
@@ -74,27 +72,20 @@
       font-size: 2rem;
       margin-bottom: 10px;
     }
-    a.button {
+    a.button, button.button {
       display: inline-block;
       padding: 10px 20px;
-      background-color: var(--blue); 
+      background-color: var(--blue);
       color: var(--brown);
       border: none;
       border-radius: 5px;
       font-weight: bold;
       text-decoration: none;
       transition: background-color 0.3s ease;
+      cursor: pointer;
     }
-    a.button:hover {
+    a.button:hover, button.button:hover {
       text-decoration: underline;
-    }
-    a img {
-      text-decoration: none;
-      border: none;
-      display: inline-block;
-    }
-    a {
-      text-decoration: none;
     }
     .project {
       background-color: var(--white);
@@ -110,53 +101,53 @@
     }
   </style>
 </head>
-    
+
 <body>
   <header>
-    <div class = "logo">
-      <h1> Juri Kasai </h1>
+    <div class="logo">
+      <h1>Juri Kasai</h1>
     </div>
-    <nav class = "nav-tabs">
+    <nav class="nav-tabs">
       <button class="tablink" onclick="openTab('about')">About</button>
       <button class="tablink" onclick="openTab('projects')">Projects</button>
       <button class="tablink" onclick="openTab('skills')">Skills</button>
     </nav>
   </header>
 
-  <section class = "hero">
-    <h2> My name is Juri Kasai </h2>
-    <p> Undergraduate Computer Science student at Lancaster University Leipzig.</p>
+  <section class="hero">
+    <h2>My name is Juri Kasai</h2>
+    <p>Undergraduate Computer Science student at Lancaster University Leipzig.</p>
   </section>
 
-  <section class = "section active" id="about">
+  <section class="section active" id="about">
     <h2>About Me</h2>
     <p>
       I’m currently in my second year of studying Computer Science. I'm building up my experience through coursework and small projects, and I’m especially interested in how design and technology come together in software. I'm still exploring different areas in tech — from user-focused design to coding — and I look forward to developing my skills further.<br><br>
       Outside of studies, I love dogs — especially my brown and apricot toy poodles!
     </p>
-    <p style="margin-top: 20px;">
-      <a href="https://github.com/puplove18" target="_blank" style="margin-right: 10px;">
-        <img src="assets/github.png" alt="GitHub" width="28" height="28" style="vertical-align: middle;" />
+
+    <div style="display: flex; align-items: center; gap: 12px; margin-top: 20px;">
+      <a href="https://github.com/puplove18" target="_blank">
+        <img src="assets/github.png" alt="GitHub" width="28" height="28" />
       </a>
       <a href="https://www.linkedin.com/in/juri-kasai-2b69aa2a3" target="_blank">
-        <img src="assets/linkedin.png" alt="LinkedIn" width="28" height="28" style="vertical-align: middle;" />
+        <img src="assets/linkedin.png" alt="LinkedIn" width="28" height="28" />
       </a>
       <button class="button" onclick="openTab('projects')">View My Projects</button>
-    </p>
+    </div>
   </section>
 
-  <section class = "section active" id="projects">
+  <section class="section" id="projects">
     <h2>Projects</h2>
-    <div class = "project">
-      <strong> Personal Portfolio Website</strong><br />
+    <div class="project">
+      <strong>Personal Portfolio Website</strong><br />
       This website, inspired by my dogs' colors, built using HTML and CSS.
       <br /><em>HTML, CSS, GitHub Pages</em><br />
       <a href="https://github.com/puplove18/puplove18.github.io" target="_blank">GitHub Repo</a>
     </div>
-    <!-- Add more projects here -->
   </section>
 
-  <section class = "section active" id="skills">
+  <section class="section" id="skills">
     <h2>Skills & Tools</h2>
     <ul>
       <li><strong>Comfortable with:</strong> Python, Java</li>
@@ -170,22 +161,19 @@
   <footer>
     &copy; 2025 Juri Kasai <br>
     <small>
-      <a href="https://www.flaticon.com/free-icons/github" title="github icons">GitHub icons by riajulislam</a> | 
+      <a href="https://www.flaticon.com/free-icons/github" title="github icons">GitHub icons by riajulislam</a> |
       <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">LinkedIn icons by IconsBox</a> — Flaticon
     </small>
   </footer>
-  
+
   <script>
     function openTab(tabId) {
       const tabs = document.querySelectorAll('.section');
       tabs.forEach(tab => tab.classList.remove('active'));
       document.getElementById(tabId).classList.add('active');
     }
-  
-    // Show 'about' tab by default on page load
+
     window.onload = () => openTab('about');
   </script>
-
 </body>
 </html>
-
